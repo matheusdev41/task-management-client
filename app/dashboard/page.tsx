@@ -1,9 +1,9 @@
-
+import DashboardCards from "../components/dashboardcards"
 
 export default function Dashboard() {
     return (
         <div>
-            <h1>Página Painel Dashboard</h1>
+            <DashboardCards />
         </div>
     )
 }

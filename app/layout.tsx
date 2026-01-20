@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Header } from "./components/header";
+import DashboardCards from "./components/dashboardcards";
 
 export default function RootLayout({
   children,
