@@ -26,6 +26,14 @@ export function Header() {
                             Dashboard
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                          href="/posts"
+                          className="houver:text-gray-300 transition-colors"
+                        >
+                            Posts
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

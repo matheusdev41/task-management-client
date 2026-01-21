@@ -6,34 +6,59 @@ import {
   CardHeader,
   CardTitle, 
 } from "@/components/ui/card"
+import { Metadata } from "next"
 
+export const metadata: Metadata = {
+  title: 'Home - Gerencie suas tarefas',
+  description: 'Descrição da Home',
+  openGraph: {
+    title: 'Task Management - Organize tarefas e aumente sua produtividade',
+    description: 'Gerencie tarefas, organize projetos e acompanhe sua produtividade em um sistema simples rápido e eficiente'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot:{
+      index: true,
+      follow: true, 
+    }
+  }
+}
 
 export default function Home(){
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-6">
+    <main className="flex min-h-screen flex-col items-center px-6">
       {/* Hero */}
-      <section className="text-center max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight">
-          Bem vindo ao seu sistema
-        </h1>
+      <section className="relative flex min-h-[30vh] w-full flex-col items-center justify-center text-center">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-muted/50 to-background" />
+          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            Bem vindo ao seu sistema
+          </h1>
 
-        <p className="mt-4 text-muted-foreground">
+        <p className="mt-4 max-w-xl text-muted-foreground">
            Gerencie dados, acompanhe métricas e organize suas informações em um único lugar
         </p>
 
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex gap-4">
           <Button asChild>
               <Link href="/dashboard">Acessar Dashboard</Link>
           </Button>
 
-          <Button variant="outline">
-              Saiba mais
+          <Button variant="outline" asChild>
+            <Link href="/about">Saiba mais</Link>
           </Button>
         </div>
       </section>
 
+      <section className="my-14 flex items-center gap-4 text-muted-foreground">
+        <div className="h-px flex-1 bg-border">
+          <span className="text-sm">Tudo o que você precisa em um só lugar</span>
+        </div>
+      </section>
+
       {/* Features */}
-      <section className="mt-16 grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
+      <section className="mb-20 grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
           <Card>
               <CardHeader>
                 <CardTitle>Organização</CardTitle>
@@ -61,7 +86,6 @@ export default function Home(){
             </CardContent>
           </Card>
       </section>
-
     </main>
   )
 }
