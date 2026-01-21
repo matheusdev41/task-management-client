@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import { Header } from "@/components/layout/header";
 
 export const metadata: Metadata = {
@@ -20,18 +20,14 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children
+export default function PublicLayout({
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
+    <div>
         {children}
-      </body>
-    </html>
+    </div>
   );
 }

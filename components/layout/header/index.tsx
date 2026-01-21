@@ -6,13 +6,13 @@ export function Header() {
         <header className="bg-black text-white px-8 py-4">
             <nav className="flex items-center justify-between">
                 <div className="text-xl font-bold">
-                    <Link href="/">Next.js</Link>
+                    <Link href="/home">Next.js</Link>
                 </div>
 
                 <ul className="flex gap-6">
                     <li>
                         <Link
-                          href="/"
+                          href="/home"
                           className="houver:text-gray-300 transition-colors"  
                         >
                           Home
